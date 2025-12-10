@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorek Schools - CBT Examination Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /*
+            Professional, Classical, and Highly Responsive CSS for Sorek Schools CBT Portal
+            Uses clean typography and a flexible grid layout.
+        */
+
+        :root {
+            --primary-color: #004d40; /* Deep Teal/Green - Professional */
+            --secondary-color: #ffb300; /* Amber/Gold - Accent */
+            --text-color: #333;
+            --light-bg: #f7f7f7; /* Slightly lighter background */
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+        }
+
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            min-height: 100vh; /* Ensures footer is at the bottom on short pages */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header Styling - Classical Feel */
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 2.5rem 0; /* Increased padding */
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-bottom: 7px solid var(--secondary-color); /* Thicker accent line */
+        }
+
+        header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.8rem; /* Larger title */
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header .subtitle {
+            font-style: italic;
+            opacity: 0.95;
+            font-size: 1.1rem;
+        }
+
+        /* Main Content and Welcome Message */
+        main {
+            flex-grow: 1; /* Allows main content to push footer down */
+            padding: 4rem 0; /* Increased padding */
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            padding: 2.5rem;
+            background-color: var(--card-bg);
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .welcome-message h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+        }
+
+        /* Class Card Grid - Highly Responsive */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly wider cards */
+            gap: 25px; /* Increased gap */
+            justify-content: center;
+        }
+
+        .class-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 140px; /* Ensures uniform card height */
+            text-decoration: none;
+            color: var(--text-color);
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color); /* Slightly thicker border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            text-align: center;
+        }
+
+        .class-card:hover {
+            transform: translateY(-8px) scale(1.02); /* More pronounced lift effect */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+            border-color: var(--primary-color); /* Primary color highlight */
+        }
+
+        .class-card h3 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+            font-family: 'Merriweather', serif;
+        }
+
+        .class-card p {
+            font-size: 1rem;
+            color: #666;
+            font-style: normal; /* Removed italic for better readability */
+            font-weight: 300;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--text-color);
+            color: #ccc;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer p:last-child {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .welcome-message {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            .class-card h3 {
+                font-size: 1.4rem;
+            }
+            main {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Sorek Schools</h1>
+            <p class="subtitle">Coding and Technology CBT Examination Portal</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="welcome-message">
+            <h2 id="greeting">Welcome, Esteemed Students!</h2>
+            <p>Please select your current class below to access the Computer-Based Test (CBT) for **Coding and Technology**. Ensure you choose the correct link.</p>
+        </section>
+
+        <section class="class-selection">
+            <div class="card-grid">
+                <a href="#" class="class-card" data-class-id="PRIMARY">
+                    <h3>Primary School</h3>
+                    <p>Classes 4-6</p>
+                </a>
+                
+                <a href="#" class="class-card" data-class-id="JSS1">
+                    <h3>JSS 1</h3>
+                    <p>Junior Secondary School Year 1</p>
+                </a>
+                
+                <a href="#" class="class-card" data-class-id="JSS2">
+                    <h3>JSS 2</h3>
+                    <p>Junior Secondary School Year 2</p>
+                </a>
+                
+                <a href="#" class="class-card" data-class-id="JSS3">
+                    <h3>JSS 3</h3>
+                    <p>Junior Secondary School Year 3</p>
+                </a>
+                
+                <a href="#" class="class-card" data-class-id="SS1">
+                    <h3>SS 1</h3>
+                    <p>Senior Secondary School Year 1</p>
+                </a>
+                
+                <a href="#" class="class-card" data-class-id="SS2_SS3">
+                    <h3>SS 2 & SS 3</h3>
+                    <p>Senior Secondary School Years 2 & 3</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sorek Schools. All rights reserved.</p>
+            <p>Prepared and administered by **Mr. Abraham** (Coding and Technology Instructor)</p>
+        </div>
+    </footer>
+
+    <script>
+        /*
+            JavaScript for Sorek Schools CBT Portal
+            Handles link assignment and dynamic time-based greeting.
+        */
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Define the link mapping for easy maintenance
+            const examLinks = {
+                'PRIMARY': 'https://forms.gle/JNbtvJFyyVKFGTCk8',
+                'JSS1': 'https://forms.gle/XTEGhgp5LkcxvNTTA',
+                'JSS2': 'https://forms.gle/MW86oYNgEwZFCWi97',
+                'JSS3': 'https://forms.gle/gKXrozcvcHMDghMv6',
+                'SS1': 'https://forms.gle/U1mSKHudsKfRetuU9',
+                'SS2_SS3': 'https://forms.gle/aAB171uYsWgxS5917'
+            };
+
+            // 2. Select all class cards
+            const classCards = document.querySelectorAll('.class-card');
+
+            // 3. Loop through cards and assign the correct link (href)
+            classCards.forEach(card => {
+                const classId = card.getAttribute('data-class-id');
+                if (examLinks[classId]) {
+                    card.href = examLinks[classId];
+                    card.target = '_blank'; // Opens the exam in a new tab
+                } else {
+                    // Fallback for missing links
+                    console.error(`Link not found for class ID: ${classId}`);
+                    card.href = '#';
+                    card.style.cursor = 'default';
+                }
+            });
+
+            // 4. Dynamic Time-based Greeting
+            const greetingElement = document.getElementById('greeting');
+            const currentTime = new Date();
+            const hour = currentTime.getHours();
+            let greetingMessage;
+
+            if (hour < 12) {
+                greetingMessage = "Good Morning, Esteemed Students!";
+            } else if (hour < 18) {
+                greetingMessage = "Good Afternoon, Esteemed Students!";
+            } else {
+                greetingMessage = "Good Evening, Esteemed Students!";
+            }
+
+            if (greetingElement) {
+                greetingElement.textContent = greetingMessage;
+            }
+        });
+    </script>
+</body>
+</html>
